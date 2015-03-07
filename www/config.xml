@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0"
 	id="intere.stack" version="1.0.0">
-	<name>Intere Stack</name>
+	<name>IntereStack</name>
 
 	<description>
 		A sample Apache Cordova application that responds to the
@@ -9,10 +9,7 @@
 		event.
 	</description>
 
-	<author href="http://www.eclipse.org/thym" email="thym-dev@eclipse.org">
-		Eclipse.org -
-		Thym
-	</author>
+	<author href="http://www.eclipse.org/thym" email="thym-dev@eclipse.org">Amdrés Mateo Otálvaro - Daniel Ermilson Velásquez</author>
 
 	<content src="index.html" />
 

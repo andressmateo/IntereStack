@@ -1,4 +1,4 @@
-
+/*
 var app = {
     // Application Constructor
     initialize: function() {
@@ -32,3 +32,18 @@ var app = {
 };
 
 app.initialize();
+
+}*/
+var interestack = angular.module('ui.bootstrap.interestack', ['ui.bootstrap']);
+
+interestack.controller('interestackCtrl', function($scope, $http) {
+	$scope.template = "main_search.html";
+
+
+	$scope.search = function () {
+		$scope.template = "results.html";
+	};
+
+
+});
+
