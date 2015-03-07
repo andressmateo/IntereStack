@@ -35,6 +35,7 @@ margin:-90px 0px 0px -198px; /* offset vertical: half of image height */
 /* offset horizontal: half of image width and text area width */
 }
 }
+/*
 h1 {
 font-size:50px;
 font-weight:normal;
@@ -42,7 +43,7 @@ margin:0px;
 overflow:visible;
 padding:0px;
 text-align:center;
-}
+}*/
 
 @keyframes fade {
 from { opacity: 1.0; }

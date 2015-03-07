@@ -1,7 +1,26 @@
 <div class="container">
-<div class="row">
-	<div class="col-lg-12" style="margin:20% 0%;text-align:center;">
-			<h1>Próximamente aquí podrás ver los resultados ;)</h1> <br /><br />
+	<div class="row">
+		<br /> <br /> <br />
+		<div class="col-xs-12">
+			<div class="input-group">
+				<input type="text" class="form-control big-input"
+				ng-model="group_question" value="{{group_question}}"
+				placeholder="¿Qué te interesa?" />
+				<div class="input-group-addon"><span
+				class="glyphicon glyphicon-search"
+				aria-hidden="true"></span></div>
+			</div>
+		</div>
+	</div>
+	<br /><br />
+	<div class="row">
+		<div class="col-xs-12" style="text-align: center;">
+			<ul class="list-group">
+				<li class="list-group-item"
+					ng-repeat="g in groups | search_for_groups:group_question">
+					<h1>{{g}}</h1>
+				</li>
+			</ul>
 		</div>
 	</div>
 </div>
