@@ -1,47 +1,26 @@
-/*
-var app = {
-    // Application Constructor
-    initialize: function() {
-        this.bindEvents();
-    },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
-};
-
-app.initialize();
-
-}*/
 var interestack = angular.module('ui.bootstrap.interestack', ['ui.bootstrap']);
+
+interestack.config(['$httpProvider', function($httpProvider) {
+    $httpProvider.defaults.useXDomain = true;
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
+}
+]);
 
 interestack.controller('interestackCtrl', function($scope, $http) {
 	
-	$scope.groups =  ["Calculo 1 - Felix", "Semillero de programación", "Aprendiendo Haskell", 
-	                  "Mecánica de fluidos", "Simulación y modelación", "Cálculo 3", "Monitorías Juan Pablo Álvarez",
-	                  "Observadores de aves", "SERES", "Becados ANDI", "Estudiantes becados", "Ingeniería de Sistemas 2013-1",
-	                  "¡Speak english with us!", "Cálculo 2", "Cálculo 3 - Espitia", "Pre-cálculo"];
+	$scope.groups =  [];
+	
+	
+	//$http.get('http://interestack.herokuapp.com/get_gropus', {
+	$http.get('http://127.0.0.1:5000/get_gropus', {
+	      params: {
+	      }
+	    }).then(function(response){
+	    	response.data.names.map(function(item){
+	    		$scope.groups.push(item.name);
+	        });
+	    });
+	
 	
 	$scope.template = "main_search.html";
 	$scope.search = function () {
