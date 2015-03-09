@@ -4,30 +4,66 @@
 		<div class="col-xs-12">
 			<div class="input-group">
 				<input type="text" class="form-control big-input"
-					ng-model="group_question" value="{{group_question}}"
-					placeholder="¿Qué te interesa?" />
-				<div class="input-group-addon">
-					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-				</div>
+				ng-model="group_question" value="{{group_question}}"
+				placeholder="¿Qué te interesa?" />
+				<div class="input-group-addon"><span
+				class="glyphicon glyphicon-search"
+				aria-hidden="true"></span></div>
 			</div>
 		</div>
 	</div>
-	<br /> <br />
+	<br /><br />
 	<div class="row">
-		<div class="col-xs-12">
+		<div class="col-xs-12" style="text-align: center;">
 			<ul class="list-group">
 				<li class="list-group-item"
 					ng-repeat="g in groups | search_for_groups:group_question">
-					<h3>{{g}}</h3>
+					<h1>{{g}}</h1>
 				</li>
 			</ul>
 		</div>
 	</div>
-	<!--
-	<div class="container">
+	<script type="text/javascript">
+		document.getElementById("myButton").onclick = function () {
+    	location.href =sample_page.html;
+		};
+	</script>
+	
+	<div class="row">
 		
-		<div class="col-xs-12" style="text-align: right;">
-		<a href="#" class="button"><span>✓</span>Suscribirse</a>
-		</div> -->
-</div>
+  		<div class="col-sm-1"><h4>Ingeniería de Sistemas 2013-1</h4></div>
+  		<div class="col-sm-1"><a href="sample_page.html" class="button">Suscribirse</a></div>
+	</div>
+	
+	
+	<div class="row">
+		
+  		<div class="col-sm-1"><h4>Cálculo I</h4></div>
+  		<div class="col-sm-1"><a href="sample_page.html" class="button">Suscribirse</a></div>
+	</div>
+	
+	<div class="row">
+		
+  		<div class="col-sm-1"><h4>Cálculo II</h4></div>
+  		<div class="col-sm-1"><a href="sample_page.html" class="button">Suscribirse</a></div>
+	</div>
+	
+	<div class="row">
+		
+  		<div class="col-sm-1"><h4>Cálculo III</h4></div>
+  		<div class="col-sm-1"><a href="sample_page.html" class="button">Suscribirse</a></div>
+	</div>
+	
+	<div class="row">
+		
+  		<div class="col-sm-1"><h4>Fundamentos de Programación</h4></div>
+  		<div class="col-sm-1"><a href="sample_page.html" class="button">Suscribirse</a></div>
+	</div>
+	
+	<div class="row">
+		
+  		<div class="col-sm-1"><h4>Matemáticas Financieras</h4></div>
+  		<div class="col-sm-1"><a href="sample_page.html" class="button">Suscribirse</a></div>
+	</div>
+	
 </div>
