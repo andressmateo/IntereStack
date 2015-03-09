@@ -25,5 +25,5 @@
 		<param name="ios-package" value="CDVNotification" />
 		
 	<param name="id" value="org.apache.cordova.dialogs" /></feature>
-
+	   <icon src="img/Logo.png" />
 </widget>
