@@ -17,7 +17,9 @@ interestack.controller('interestackCtrl', function($scope, $http) {
 		$scope.group_question = document.getElementById("search").value;;
 		$scope.template = "results.html";
 	};
-
+	$scope.view = function(){
+		$scope.template = "sample_page.html";
+	};
 
 });
 
