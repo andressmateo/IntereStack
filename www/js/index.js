@@ -25,6 +25,26 @@ interestack.controller('interestackCtrl', function($scope, $http) {
 		$scope.toView = g;
 		$scope.template = "view_group.html";
 	};
+	$scope.addForm = function(g){
+		$scope.toAdd = g;
+		$scope.template = "add.html";
+	};
+	
+	$scope.add = function(){
+		//$http.jsonp('http://interestack.herokuapp.com/users?callback=JSON_CALLBACK', {
+		$http.jsonp('http://127.0.0.1:5000/users?callback=JSON_CALLBACK', {
+		      params: {
+		    	  user: $scope.user,
+				  email: $scope.email,
+				  group: $scope.toAdd.name
+		      }
+		    }).then(function(response){
+		    	response.data.users.map(function(item){
+		    		//$scope.groups.push(item);
+		    		alert(item.name);
+		        });
+		    });
+	};
 
 });
 //Filtro para la búsqueda por nombre.
