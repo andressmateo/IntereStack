@@ -1,4 +1,3 @@
-
 <div class="container">
 	<div class="row">
 		<div class="col-md-5  toppad  pull-right col-md-offset-3 ">
@@ -11,13 +10,13 @@
 
 			<div class="panel panel-info">
 				<div class="panel-heading">
-					<h3 class="panel-title">Nombre del Grupo</h3>
+					<h3 class="panel-title">{{toView.name}}</h3>
 				</div>
 				<div class="panel-body">
 					<div class="row">
 						<div class="col-md-3 col-lg-3 " align="center">
 							<img alt="User Pic"
-								src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100"
+								src="{{toView.image}}"
 								class="img-circle">
 						</div>
 
@@ -26,34 +25,17 @@
 							<table class="table table-user-information">
 								<tbody>
 									<tr>
-										<td>Categoría:</td>
-										<td>Nombre de la Categoría</td>
-									</tr>
-									<tr>
-										<td>Fecha de creación del grupo</td>
-										<td>08/03/2015</td>
-									</tr>
-
-
-									<tr>
-									<tr>
-										<td>Número de Miembros</td>
-										<td>100</td>
+										<td>Descripción</td>
+										<td>{{toView.description}}</td>
 									</tr>
 									<tr>
 										<td>Lugar de Reunión Habitual</td>
-										<td>Bloque 19 (Ingenierías) Mezanine</td>
+										<td>EAFIT</td>
 									</tr>
 									<tr>
-										<td>Email del Administrador</td>
-										<td><a href="mailto:dvelas26@eafit.edu.co">dvelas26@eafit.edu.co</a></td>
+										<td>Última actividad</td>
+										<td>{{toView.last_activity}}</td>
 									</tr>
-									<td>Telefonos Celulares</td>
-									<td>Andres<br> <br>304-328-80-05
-									</td>
-
-									</tr>
-
 								</tbody>
 							</table>
 							<center>
